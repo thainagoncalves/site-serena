@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    overflow-x: hidden; /*oculta a barra lateral */
+}
+
+.menu_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+
+    width: 100%;
+    padding: 50px;
+    z-index: 10;
+    max-width: 1500px; /*limite de largura do elemento na pag*/
+}
+
+.lista_menu {
+    display: flex;
+    list-style: none;
+    font-family: "Montserrat", sans-serif;
+    padding: 0;
+    gap: 100px;
+}
+.lista_menu a {
+    text-decoration: none; /*tira o sublinhado */
+    color: rgb(108, 57, 57);
+    font-size: 19px;
+    font-family: "Montserrat", sans-serif;
+    transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+.lista_menu a:hover {
+    color: rgb(231, 171, 171); 
+    transform: translateY(3px);
+}
+
+html {
+    scroll-behavior: smooth; /* Rolagem suave */
+}
+
+.esquerda {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.direita {
+    display: flex;
+    justify-content: flex-start;
+    flex: 1;
+}
+
+.list_item {
+    color: rgb(116, 20, 20);
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    width: 110px; 
+    height: auto;
+    position: relative;
+    z-index: 2;
+    margin: 0 60px;
+}
+
+/*----------------------------------*/
+
+header {
+    height: 100vh;
+    background-image: url("../img/capa.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Faz o slogan ficar na parte inferior do header */
+    
+}
+
+.slogan {
+    font-size: 30px;
+    line-height: 1;
+    text-align: center; 
+    padding-bottom: 30px; 
+    color: whitesmoke;
+    font-family: "Nothing You Could Do", sans-serif;
+}
+h3{
+    font-weight: 400;
+    color: rgb(106, 90, 51);
+    text-align:right
+}
+
+/*----------------------------------*/
+.sobre{
+    padding: 30px;
+    background-color: rgb(23, 21, 16);
+    display: flex;
+    justify-content: center;
+}
+h2{
+    color: antiquewhite;
+    font-weight: 200;
+    font-size: 38px;
+    align-self: center;
+    font-family: "Nothing You Could Do", sans-serif;
+}
+p.sobre{
+  font-size: 18px;
+  line-height: 1.8;
+  color: antiquewhite;
+  font-weight: 200;
+  text-align: center;
+  max-width: 1000px;
+  font-family: "Montserrat", sans-serif;
+  
+}
+/*--------------------------------*/
+.espaco{
+    padding: 20px 20px 20px 0;
+    background-color:  rgb(36, 34, 27); 
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.espaco_textos{
+    max-width: 45%; /* Define uma largura máxima para o bloco de textos */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+h2.espaco{
+    font-size: 38px;
+    font-weight: 300;
+    padding: 50px;
+    text-align: center;
+    font-family: "Nothing You Could Do", sans-serif;
+}
+p.espaco{
+    font-size: 18px;
+    line-height: 1.8;  
+    color: antiquewhite;
+    font-weight: 200px;
+    font-family: "Montserrat", sans-serif;
+}
+img.espaco{
+    width: 50%;
+    height: 100%;
+    padding: 0;
+    transition: transform 0.5s ease;
+}
+.espaco img:hover {
+    transform: scale(1.1);
+}
+/*----------------------------*/
+.infraestrutura{
+    padding: 30px;
+    background-color: rgb(23, 21, 16);
+    font-family: "Montserrat", sans-serif;
+
+}
+.lista_infraestrutura{
+    color:antiquewhite;
+    list-style-position: inside; /*bolinha junto ao texto*/
+    padding-bottom: 40px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+h2.infraestrutura{
+    font-size: 38px;
+    font-weight: 300px;
+    font-family: "Nothing You Could Do", sans-serif;
+}
+/*--------------------------------------------*/
+.servicos {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px;
+    background-color: rgb(36, 34, 27);
+}
+
+.img_servico {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    color: white;
+    width: 30%; 
+    text-align: center;
+}
+
+.img_servico h2 {
+    font-size: 28px; 
+    margin-bottom: 10px; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.img_servico .imagem {
+    width: 100%;
+    height: 250px; 
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease-in-out; /*suaviza o efeito zoom*/
+}
+.img_servico:hover .imagem {
+    transform: scale(1.05); /* efeito zoom*/
+}
+.servico1 .imagem {
+    background-image: url("../img/bufffet1.jpg");
+}
+
+.servico2 .imagem {
+    background-image: url("../img/buffet2.jpg");
+}
+
+.servico3 .imagem {
+    background-image: url("../img/bar.jpg");
+}
+
+.img_servico p {
+    color: white;
+    padding: 20px;
+    width: 80%; 
+    text-align: center;  
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.5;
+
+    font-size: 18px;
+    line-height: 1.8;
+}
+/*--------------------------------------------*/
+
+.tituloequipe{
+    text-align: center;
+    color: blanchedalmond;
+    padding: 10px;
+    font-size: 38px;
+    font-family: "Nothing You Could Do", sans-serif;
+}
+.equipe{ 
+    background-color:  rgb(23, 21, 16);
+    padding: 30px;
+}
+.equipes{ 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    gap: 20px; /* espaçamento dos elementos */
+}
+.equipe h2{
+    padding: 10px;
+}
+.buffet{
+    flex-direction: column;
+}
+.decoracao{
+    flex-direction: column;
+}
+.musica{
+    flex-direction: column;
+}
+
+.equipe img {
+    padding:30px;
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%;
+    object-fit: cover; /*ajuste de imagem sem distorção*/
+    margin-bottom: 10px;
+}
+.equipe p {
+    width: 300px;
+    margin: 0 auto; 
+    color: whitesmoke;
+    font-size: 20px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 18px;
+    line-height: 1.8;
+}
+/*--------------------------------------------*/
+footer {
+    background-color:  rgb(94, 86, 68);
+    padding: 30px;
+}
+
+.rodape {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 300px; /*espaçamento dos elementos*/
+}
+
+.titulofooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.imgFooter {
+    width: 100px;
+    height: auto;
+}
+
+.contatos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contato-item {
+    display: flex;
+    align-items:flex-start;
+    gap: 10px; 
+}
+
+.contatos p {
+    color: aliceblue;
+    font-family: "Montserrat", sans-serif;
+    margin: 0; /* remove espaçamento extra */
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+}
+
+.contatos img {
+    width: 30px;
+    height: auto;
+    margin: 5px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 20px 40px;
+    background-color: rgb(36, 34, 27);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50px;
+}
+button:hover {
+    background-color: #1a1410;
+    transform: scale(1.05); /* aumenta levemente o botão */
+}
